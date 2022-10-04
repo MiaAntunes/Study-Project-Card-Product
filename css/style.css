@@ -1,0 +1,242 @@
+/*Variáveis*/
+:root{
+    --azul-claro:hsl(228, 12%, 48%);
+    --azul-escuro:hsl(212, 21%, 14%);
+    --cream: hsl(30, 38%, 92%);
+    --green:hsl(158, 36%, 37%);
+    --verde-escuro:hsl(158, 36%, 26%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: var(--cream);
+    width:100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Mobile (max:300px)*/
+main{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column; 
+    margin-top: 1.5rem;
+    width: 85%;
+}
+
+.container__imagem-phone{
+    border-radius: .8rem .8rem 0 0;
+    height: 25%;
+    width:100%;
+}
+
+.container__imagem-desktop{
+    border-radius: 1rem 0 0 1rem; /*Deixei já preparado para o desktop*/
+    display: none;
+}
+
+.container__box{
+    background: white;
+    border-radius:0 0 .8rem .8rem;
+    display: flex;
+    padding: 1rem;
+    height: 35%;
+}
+
+
+.box__subtitulo{
+    color: var(--azul-claro);
+    font-size: 0.7rem;
+    font-weight: 100;
+    letter-spacing: 5px;
+    margin: .5rem 0; 
+    text-transform: uppercase;
+}
+
+.box__titulo{
+    font-family: 'Fraunces', serif;
+    font-size: 1.30rem;
+    margin: .8rem 0; 
+    line-height: 1.25rem;
+}
+
+.box__descricao{
+    color: var(--azul-claro);
+    font-size: 0.69rem;
+    line-height: 1.125rem;
+    margin: .7rem 0; 
+}
+
+.box__valor{
+    align-items: center;
+    display: flex;
+    margin: 1rem 0;
+}
+
+#valor__real{
+    font-family: 'Fraunces', serif;
+    color: var(--green);
+    font-size: 1.4375rem;
+    margin-right: 1rem;
+}
+
+#valor__antigo{
+    color: var(--azul-claro);
+    font-size:0.75rem;
+    text-decoration: line-through;
+}
+
+.box__container__botao{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.botao__icone{
+    padding-right: .5rem;
+    width: 14.5px;
+}
+
+.container__botao{
+    background: var(--green);
+    border: 4px 4px solid var(--green);
+    border-radius: 7px;
+    color: white;
+    font-family:'Montserrat', sans-serif;
+    font-size: 13px;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.container__botao:hover{
+    background: var(--verde-escuro);
+    cursor: pointer;
+}
+
+@media screen and (min-width:350px) {
+    .container__imagem-phone{
+       height: 30%;
+    }
+
+    .container__box{
+        height: 40%;
+        padding-bottom: .5rem;
+    }
+    
+    
+    .box__titulo{
+        font-size: 1.7rem;
+        line-height: 1.57rem;
+    }
+    
+    .box__descricao{
+        font-size: 0.85rem;
+    }
+
+    #valor__real{
+        font-size: 1.7rem;
+    }
+
+    .box__container__botao{
+        margin-top: .8rem;
+    }
+
+    .container__botao{
+        font-size: 0.94rem;
+        height: 2.7rem;
+    }
+
+}
+
+@media screen and (min-width:450px){
+    .container{
+        width: 330px;
+    }
+}
+
+@media screen and (min-width:600px){
+    main{
+        align-items: center;
+    }
+
+    .container{
+        height: auto;
+    }
+
+    .container__box{
+        height: 290px;
+    }
+}
+
+@media screen and (min-width:1000px){
+    .container{
+        flex-direction: row;
+        height: 500px;
+        width: 700px;
+    }
+
+    .container__imagem-phone{
+        display: none;
+    }
+
+    .container__imagem-desktop{
+        display: block;
+    }
+
+    .container__box{
+        border-radius:0 1rem 1rem 0;
+        height: auto;
+        padding: 1.7rem;
+        width: 500px;
+    }
+
+    .box{
+        margin: auto;
+    }
+
+    .box__subtitulo{
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    .box__titulo{
+        font-size: 42px;
+        line-height: 47px;
+        margin: 1rem 0;
+    }
+
+    .box__descricao{
+        font-size: 17px;
+        line-height: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .box__valor{
+        margin: 1rem 0;
+    }
+
+    #valor__real{
+        font-size: 40px;
+    }
+
+    #valor__antigo{
+        font-size: 16px;
+    }
+
+    .container__botao{
+        font-size: 1rem;
+        margin: .5rem 0;
+    }
+
+
+}
+
