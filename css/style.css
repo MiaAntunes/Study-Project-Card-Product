@@ -30,7 +30,7 @@ main{
     display: flex;
     flex-direction: column; 
     margin-top: 1.5rem;
-    width: 85%;
+    width: 80%;
 }
 
 .container__imagem-phone{
@@ -49,7 +49,7 @@ main{
     border-radius:0 0 .8rem .8rem;
     display: flex;
     padding: 1rem;
-    height: 35%;
+    height: 270px;
 }
 
 
@@ -128,7 +128,7 @@ main{
     }
 
     .container__box{
-        height: 40%;
+        height: 300px;
         padding-bottom: .5rem;
     }
     
